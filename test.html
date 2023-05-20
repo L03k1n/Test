@@ -37,7 +37,6 @@
             padding: 1.9rem 0rem;
             background-color: white;
             border-radius: 10px;
-            zoom: 2;
         }
 
         .form-wrapper h2 {
@@ -125,6 +124,13 @@
         .fade-out {
             top: -100px;
         }
+        #form__pasword-checkbox{
+            position: absolute;
+            top: 8px;
+            left: 270px;
+            width: 20px;
+        }
+        
     </style>
 </head>
 
@@ -141,6 +147,7 @@
                     <div class="form__field">
                         <input type="password" name="password" id="form__password-field">
                         <label for="form__password-field">Password</label>
+                        <input type="checkbox" id="form__pasword-checkbox" />
                     </div>
                     <p><a href="#" target="_blank" rel="nofollow">Forgot password?</a></p>
                     <button type="submit">Login</button>
@@ -150,6 +157,24 @@
         </section>
     </main>
     <script>
+        let passwordInput = document.querySelector('#form__password-field')
+        passwordInput.addEventListener('focus', function(){
+            this.parentElement.querySelector('label').classList.add('fade-out')
+        })
+        passwordInput.addEventListener('focusout', function(){
+            // this.parentElement.querySelector('label').classList.remove('fade-out')
+            if(passwordInput.value < 1){
+                this.parentElement.querySelector('label').classList.remove('fade-out')
+            }
+        })
+        let showPassword = document.querySelector('#form__pasword-checkbox')
+        showPassword.addEventListener('click', function(){
+            if(showPassword.checked == true){
+            passwordInput.type = 'text'
+            return
+        }
+        passwordInput.type = 'password'
+        })
 
     </script>
 </body>
