@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        :root {
+            font-size: 16px;
+        }
+
+        .wrapper {
+            background: linear-gradient(140deg, #337ab8, #824aad);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .form-wrapper {
+            width: 100%;
+            max-width: 390px;
+            margin: auto;
+            padding: 1.9rem 0rem;
+            background-color: white;
+            border-radius: 10px;
+            zoom: 2;
+        }
+
+        .form-wrapper h2 {
+            text-align: center;
+            padding-bottom: 1.9rem;
+            border-bottom: 1px gray solid;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        form {
+            padding: 0px 2.8rem;
+        }
+
+        form input {
+            border: none;
+            border-bottom: 2px gray solid;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            width: 18rem;
+            outline: none;
+        }
+
+        form label {
+            position: absolute;
+            left: 3px;
+            top: 2px;
+            color: gray;
+            transition: .3s;
+            cursor: text;
+        }
+
+        .form__field {
+            position: relative;
+            overflow: hidden;
+        }
+
+        form p a {
+            text-decoration: none;
+            color: gray;
+            transition: .3s;
+        }
+
+        form p a:hover {
+            opacity: .8;
+        }
+
+        form p {
+            margin-bottom: 1.5rem;
+        }
+
+        form button {
+            background-color: #2691d9;
+            font-size: 1.4rem;
+            width: 100%;
+            outline: none;
+            border: none;
+            color: white;
+            border-radius: 50px;
+            padding: 0.6rem 0rem;
+            margin-bottom: 1.7rem;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        form button:hover {
+            opacity: .7;
+        }
+
+        .signup {
+            text-align: center;
+        }
+
+        .signup a {
+            padding-left: 5px;
+            text-decoration: none;
+            color: #2691d9;
+            transition: .3s;
+        }
+
+        .signup a:hover {
+            opacity: .7;
+        }
+
+        .fade-out {
+            top: -100px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="wrapper">
+            <div class="form-wrapper">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="form__field">
+                        <input type="text" name="name" id="form__name-field">
+                        <label for="form__name-field">Username</label>
+                    </div>
+                    <div class="form__field">
+                        <input type="password" name="password" id="form__password-field">
+                        <label for="form__password-field">Password</label>
+                    </div>
+                    <p><a href="#" target="_blank" rel="nofollow">Forgot password?</a></p>
+                    <button type="submit">Login</button>
+                </form>
+                <p class="signup">Not a member? <a href="#" rel="nofollow">Signup</a></p>
+            </div>
+        </section>
+    </main>
+    <script>
+
+    </script>
+</body>
+
+</html>
