@@ -64,6 +64,11 @@
         form p a{
             text-decoration: none;
             color: gray;
+            transition: 0.3s;
+        }
+        form p a:hover{
+            color: gray;
+            opacity: 0.7;
         }
         form p{
             margin-bottom: 1.5rem;
@@ -79,6 +84,10 @@
             padding: 0.6rem 0rem;
             margin-bottom: 1.7rem;
             cursor: pointer;
+            transition: 0.3s;
+        }
+        form button:hover{
+            background-color: #0099ff;
         }
         .signup{
             text-align: center;
@@ -87,6 +96,10 @@
             padding-left: 5px;
             text-decoration: none;
             color: #2691d9;
+            transition: 0.3s;
+        }
+        .signup a:hover{
+            color: #0099ff;
         }
         .fade-out{
             top: -100px;
@@ -122,6 +135,9 @@
                 
             })
             i.addEventListener('focusout', function(){
+                if(i.value != 0){
+                    return
+                }
                 i.parentElement.querySelector('label').classList.remove('fade-out')
                 
             })
